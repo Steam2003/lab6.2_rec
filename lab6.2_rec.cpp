@@ -33,7 +33,7 @@ int main()
 }
 void create(int* mas, const int Low, const int Max, int N, int i)
 {
-	if (i <= N - 1)
+	if (i < N)
 	{
 		mas[i] = Low + rand() % (Max - Low + 1);
 		create(mas, Low, Max, N, ++i);
@@ -41,7 +41,7 @@ void create(int* mas, const int Low, const int Max, int N, int i)
 }
 void print(int* mas, int i, int N)
 {
-	if (i <= N - 1)
+	if (i < N)
 	{
 		cout << setw(3) << mas[i] << " ";
 		print(mas, ++i, N);
@@ -50,7 +50,7 @@ void print(int* mas, int i, int N)
 }
 int MinE(int* mas, int N, int i, int min)
 {
-	if (i <= N - 1)
+	if (i < N )
 	{
 		if (mas[i] < min)
 			min = mas[i];
@@ -61,7 +61,7 @@ int MinE(int* mas, int N, int i, int min)
 }
 int MaxE(int* mas, int N, int i, int max)
 {
-	if (i <= N - 1)
+	if (i < N)
 	{
 		if (mas[i] > max)
 			max = mas[i];
